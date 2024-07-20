@@ -45,6 +45,8 @@ h2 {
 /* Main content */
 main {
     padding: 20px;
+    max-width: 800px; /* Restrict the width of the main content */
+    margin: 0 auto; /* Center align */
 }
 
 .content {
@@ -57,7 +59,7 @@ main {
 .articles {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px; /* Add space between articles */
 }
 
 .article-grid {
@@ -70,8 +72,10 @@ main {
 .article-details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    text-align: left;
+    gap: 5px; /* Reduce spacing between lines */
+    text-align: right;
+    border-right: 2px solid #473144; /* Add right border */
+    padding: 0 15px; /* Add spacing on left and right */
 }
 
 .article-content {
@@ -82,7 +86,7 @@ main {
 }
 
 .article-content img {
-    width: 150px;
+    width: 200px; /* Increase image size */
     height: auto;
     margin-bottom: 10px;
 }
