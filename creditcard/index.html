@@ -7,10 +7,37 @@
     <meta name="author" content="Brandan Morris">
     <title>W07 Prove: Credit Card Form</title>
     <link rel="stylesheet" href="creditcard.css">
+    <link rel="icon" href="favicon.png">
 </head>
 <body>
-    <header>
-    </header>
-    </main>
+    <div id="form-container">
+        <div id="card-front">
+            <div id="shadow"></div>
+            <div id="image-container">
+                <span id="amount">TOTAL: <strong>$199</strong></span>
+                <span id="card-image"></span>
+            </div>
+            <label for="card-number">CARD NUMBER</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9101 1020" maxlength="16" required>
+            <div id="cardholder-container">
+                <label for="card-holder">CARD HOLDER</label>
+                <input type="text" id="card-holder" placeholder="John Doe" required>
+            </div>
+            <div id="exp-container">
+                <label for="card-exp">EXPIRATION</label>
+                <input id="card-month" type="text" placeholder="MM" maxlength="2" required>
+                <input id="card-year" type="text" placeholder="YY" maxlength="2" required>
+            </div>
+            <div id="cvc-container">
+                <label for="card-cvc">CVC/CVV</label>
+                <input id="card-cvc" placeholder="xxx" type="text" maxlength="4" required>
+                <p>Last 3 or 4 digits</p>
+            </div>
+        </div>
+        <div id="card-back">
+            <div id="card-stripe"></div>
+        </div>
+        <button type="submit" id="card-btn">Submit</button>
+    </div>
 </body>
 </html>
