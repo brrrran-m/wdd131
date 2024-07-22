@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Amatic SC', cursive;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    justify-content: center; /* Center the content by default */
+}
+
+header img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the search form spans the full width */
+    max-width: 600px; /* Limit the width to keep it neat */
+}
+
+#search-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#search-form button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.recipe {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.recipe img {
+    width: 100%;
+}
+
+.recipe .content {
+    padding: 10px;
+}
+
+.recipe .content h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.recipe .content .tags {
+    margin: 10px 0;
+}
+
+.recipe .content .tags span {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.recipe .content .rating {
+    display: flex;
+}
+
+.recipe .content .rating span {
+    font-size: 1.2em;
+    color: gold;
+}
+
+footer {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 0.8em;
+    width: 100%; /* Ensure the footer spans the full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+footer .social {
+    display: flex;
+    justify-content: flex-end; /* Align social media icons to the right */
+    margin: 0; /* Reset margin for alignment */
+}
+
+footer .social a {
+    margin: 0 5px;
+}
+
+footer small {
+    display: flex;
+    justify-content: flex-start; /* Align credit text to the left */
+    margin: 0; /* Reset margin for alignment */
+    font-size: 0.6em;
+}
+
+@media (min-width: 600px) {
+    #search-form {
+        max-width: 100%; /* Allow the search form to expand with the viewport */
+    }
+
+    #recipes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .recipe {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    main {
+        width: 960px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #search-form {
+        order: 1;
+        width: 100%;
+    }
+
+    #recipes {
+        order: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between; /* Distribute space between social icons and credit text */
+        align-items: center; /* Align items vertically */
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        font-size: 0.8em;
+        width: 100%; /* Ensure the footer spans the full width */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
+    footer .social {
+        order: 2; /* Move social media icons to the right */
+    }
+
+    footer small {
+        order: 1; /* Move credit text to the left */
+    }
+}
+
+.social img {
+    width: 24px; /* Adjust this size as needed */
+    height: 24px; /* Adjust this size as needed */
+    margin: 0 5px; /* Add some space between the icons */
+}
