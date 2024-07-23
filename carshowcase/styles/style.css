@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli:wght@400;700&display=swap");
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #333333;
+  --secondary-color: #FFFFFF;
+  --accent1-color: #FF5733;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Mooli", sans-serif;
+  --paragraph-font: Arial, Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(--primary-color); /* headlines on a white background */
+  --headline-color-on-color: white; /* headlines on a colored background */
+  --paragraph-color-on-white: var(--primary-color); /* paragraph text on a white background */
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--accent1-color); /* Change this to make the links more visible */
+  --nav-background-color: var(--primary-color);
+  --nav-hover-link-color: var(--secondary-color); /* Link color on hover */
+  --nav-hover-background-color: var(--accent1-color); /* Background color on hover */
+}
+
+body {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--headline-color-on-color);
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.logo {
+  max-width: 200px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 1em;
+}
+
+nav {
+  margin-top: 1em;
+}
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-weight: bold; /* Make the link text bold for better visibility */
+}
+
+nav a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+  padding: 0.5em;
+  border-radius: 5px; /* Optional: Add rounded corners to the hover effect */
+}
+
+main {
+  padding: 2em;
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed for larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+section {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.car-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.car {
+  border: 1px solid var(--primary-color);
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 400px; /* Set a max-width for each car div */
+}
+
+.car img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .car {
+    width: calc(50% - 1em); /* Two cars side by side with space between */
+  }
+}
+
+@media (max-width: 767px) {
+  .car {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
